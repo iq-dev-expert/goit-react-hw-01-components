@@ -15,7 +15,7 @@ export default function createProfile({
       <div className="description">
         <img src={imgUrl} alt={name} className="avatar" />
         <p className="name">{name}</p>
-        <p className="tag">{tag}</p>
+        <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
       </div>
 

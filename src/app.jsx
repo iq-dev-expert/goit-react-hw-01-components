@@ -1,5 +1,5 @@
 import ProfileItem from 'components/profile/profileItem';
-import StatisticsList from 'components/statistics/statisticsList';
+import Statistics from './components/statistics/statistics';
 import Section from 'components/section';
 import userData from './data/user.json';
 import dataStatistics from './data/data.json';
@@ -7,10 +7,10 @@ import dataStatistics from './data/data.json';
 export default function App() {
   return (
     <div>
-      <Section>
+      <Section className="section-profile">
         <ProfileItem item={userData} />
       </Section>
-      <StatisticsList items={dataStatistics} />
+      <Statistics title={'Upload stats'} stats={dataStatistics} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Profile from './createProfile';
+import Profile from './profile';
 
 export default function profileItem({ item }) {
   return (
