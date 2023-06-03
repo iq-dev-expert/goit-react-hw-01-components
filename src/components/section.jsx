@@ -5,5 +5,6 @@ export default function section({ className, children }) {
 }
 
 section.propTypes = {
+  className: PropTypes.string.isRequired,
   children: PropTypes.node,
 };
