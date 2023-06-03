@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react';
-import App from './components/profile/App';
+import App from './app';
 
 const container = document.querySelector('#root');
 const root = createRoot(container);

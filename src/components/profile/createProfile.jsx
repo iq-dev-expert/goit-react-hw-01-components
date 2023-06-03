@@ -1,5 +1,8 @@
+import PropTypes from 'prop-types';
+import defaultImg from '../../img/default-img.jpg';
+
 export default function createProfile({
-  url,
+  imgUrl = defaultImg,
   name,
   tag,
   location,
@@ -10,7 +13,7 @@ export default function createProfile({
   return (
     <div className="profile">
       <div className="description">
-        <img src={url} alt={name} className="avatar" />
+        <img src={imgUrl} alt={name} className="avatar" />
         <p className="name">{name}</p>
         <p className="tag">{tag}</p>
         <p className="location">{location}</p>
@@ -33,3 +36,13 @@ export default function createProfile({
     </div>
   );
 }
+
+createProfile.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
+};
