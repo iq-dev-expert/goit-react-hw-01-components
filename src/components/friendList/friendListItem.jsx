@@ -1,5 +1,13 @@
 import PropTypes from 'prop-types';
 import defaultImg from '../../img/default-img.jpg';
+import {
+  FriendItem,
+  Status,
+  Name,
+  Online,
+  Offline,
+  Img,
+} from './friendList.styled';
 
 export default function friendListItem({
   avatar = defaultImg,
@@ -7,11 +15,11 @@ export default function friendListItem({
   isOnline,
 }) {
   return (
-    <li className="item">
-      <span className="status">{isOnline ? 'online' : 'offline'}</span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
-    </li>
+    <FriendItem>
+      <Status>{isOnline ? <Online></Online> : <Offline></Offline>}</Status>
+      <Img src={avatar} alt={name} width="48" />
+      <Name>{name}</Name>
+    </FriendItem>
   );
 }
 
