@@ -9,9 +9,9 @@ import {
   Percentage,
 } from './statistics.styled';
 
-export default function createStatistics({ title, stats }) {
+export default function CreateStatistics({ title, stats }) {
   return (
-    <section className="section-statistics">
+    <section>
       <Container>
         <Wrapper>
           {title && <Title>{title}</Title>}
@@ -34,13 +34,13 @@ export default function createStatistics({ title, stats }) {
   );
 }
 
-createStatistics.propTypes = {
+CreateStatistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    })
-  ),
+    }).isRequired
+  ).isRequired,
 };

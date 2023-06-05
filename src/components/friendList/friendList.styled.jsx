@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
   max-width: 240px;
 `;
 
-export const FriendList = styled.ul`
+export const FriendListStyle = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
@@ -52,24 +52,16 @@ export const FriendItem = styled.li`
 
 export const Status = styled.span`
   margin: 0 10px 0 0;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  background-color: ${props => (props.online ? 'green' : 'red')};
 `;
 
 export const Name = styled.p`
   margin: 0;
-`;
-
-export const Online = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: green;
-`;
-
-export const Offline = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: red;
 `;
 
 export const Img = styled.img`

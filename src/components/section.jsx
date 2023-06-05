@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 
-export default function section({ className, children }) {
-  return <section className={className}>{children}</section>;
+export default function Section({ children }) {
+  return <section>{children}</section>;
 }
 
-section.propTypes = {
-  className: PropTypes.string.isRequired,
+Section.propTypes = {
   children: PropTypes.node,
 };

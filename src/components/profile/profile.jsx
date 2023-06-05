@@ -14,7 +14,7 @@ import {
   Quantity,
 } from './profile.styled';
 
-export default function profile({
+export default function Profile({
   imgUrl = defaultImg,
   name,
   tag,
@@ -59,7 +59,7 @@ export default function profile({
   );
 }
 
-profile.propTypes = {
+Profile.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
@@ -68,5 +68,5 @@ profile.propTypes = {
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
-  }),
+  }).isRequired,
 };
