@@ -11,7 +11,7 @@ import dataTransactions from './data/transactions.json';
 export default function App() {
   return (
     <div>
-      <Section className="section-profile">
+      <Section>
         <Profile
           imgUrl={userData.avatar}
           name={userData.username}
@@ -21,10 +21,10 @@ export default function App() {
         />
       </Section>
       <Statistics title="Upload stats" stats={dataStatistics} />
-      <Section className="section-friend-list">
+      <Section>
         <FriendList friends={dataFriends} />
       </Section>
-      <Section className="section-transaction-history">
+      <Section>
         <Transactions items={dataTransactions} />
       </Section>
     </div>

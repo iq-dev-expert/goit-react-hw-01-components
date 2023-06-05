@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import FriendListItem from './friendListItem';
-import { Container, Wrapper, FriendList } from './friendList.styled';
+import { Container, Wrapper, FriendListStyle } from './friendList.styled';
 
-export default function friendList({ friends }) {
+export default function FriendList({ friends }) {
   return (
     <Container>
       <Wrapper>
-        <FriendList>
+        <FriendListStyle>
           {friends.map(friend => {
             return (
               <FriendListItem
@@ -17,16 +17,16 @@ export default function friendList({ friends }) {
               />
             );
           })}
-        </FriendList>
+        </FriendListStyle>
       </Wrapper>
     </Container>
   );
 }
 
-friendList.propTypes = {
+FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-    })
-  ),
+    }).isRequired
+  ).isRequired,
 };
